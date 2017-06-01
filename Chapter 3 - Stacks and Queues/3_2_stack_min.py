@@ -8,9 +8,9 @@
 #	- Have each node store the minimum value from that node through the end
 
 from node import Node
+from stack import Stack
 
-class MinStack:
-	top = None
+class MinStack(Stack):
 	stack_min = None
 
 	def push(self, val):
@@ -28,14 +28,7 @@ class MinStack:
 		self.top = self.top.nxt
 		if (self.top):
 			self.stack_min = self.top.min
-		return temp
-
-	def peek(self):
-		if (self.top):
-			return self.top.data
-
-	def is_empty(self):
-		return (not self.top)
+		return temp.data
 
 if __name__ == "__main__":
 	ms = MinStack()

@@ -10,6 +10,15 @@ public class SinglyLinkedList {
 			curr = curr.next;
 		}
 	}
+	public int getLength() {
+		int counter = 0;
+		Node curr = head;
+		while (curr != null) {
+			counter++;
+			curr = curr.next;
+		}
+		return counter;
+	}
 
 	public void printLinkedList() {
 		Node curr = head;
